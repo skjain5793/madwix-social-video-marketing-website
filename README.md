@@ -1,6 +1,6 @@
-# GrowVision Media — Video Marketing Agency Website
+# Madwix — Video Marketing Agency Website
 
-A single-page, premium, responsive business website for a fictional video marketing agency, **GrowVision Media**. Built as a pure static site — no build tools, no frameworks, no compilation step required.
+A single-page, premium, responsive business website for a fictional video marketing agency, **Madwix**. Built as a pure static site — no build tools, no frameworks, no compilation step required.
 
 ## Tech Stack
 
@@ -58,7 +58,7 @@ Everything in this build is clearly-labeled sample/placeholder content meant to 
 - **Stats** (`#growth`) — Marked with a visible "Example figure" tag and a disclaimer note; update `data-count` attributes and labels with real numbers when available.
 - **Pricing** (`#pricing`) — Marked with a "Sample pricing" tag; update package names, features, and prices freely.
 - **Testimonials** (`#testimonials`) — Marked with a "Sample testimonial" tag; swap in real client quotes, names, and photos in `assets/images/`.
-- **Contact details** — The phone number (`tel:+919876543210`) and email (`mailto:hello@growvisionmedia.com`) are clickable links in both the Contact section and Footer — update the number/email in both the visible text and the `tel:`/`mailto:` href attributes.
+- **Contact details** — The phone number (`tel:+919876543210`) and email (`mailto:care.madwix@gmail.com`) are clickable links in both the Contact section and Footer — update the number/email in both the visible text and the `tel:`/`mailto:` href attributes.
 - **Social links** — Update the `href="#"` placeholders on the social icons in the Contact section and Footer.
 
 ## Sections Included
