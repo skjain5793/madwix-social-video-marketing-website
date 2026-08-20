@@ -34,21 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
      Sticky nav background on scroll
      --------------------------------------------------------- */
   var siteNav = document.getElementById('siteNav');
-  var backToTop = document.getElementById('backToTop');
 
   function handleScrollState() {
     var scrolled = window.scrollY > 40;
     if (siteNav) siteNav.classList.toggle('scrolled', scrolled);
-    if (backToTop) backToTop.classList.toggle('show', window.scrollY > 500);
   }
   handleScrollState();
   window.addEventListener('scroll', handleScrollState, { passive: true });
-
-  if (backToTop) {
-    backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 
   /* ---------------------------------------------------------
      Smooth scrolling for in-page nav links
