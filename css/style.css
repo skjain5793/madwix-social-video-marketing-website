@@ -341,7 +341,7 @@ p {
 .hero-sub {
   font-size: 1.12rem;
   color: var(--text-muted);
-  max-width: 560px;
+  /* max-width: 560px; */
 }
 
 .hero-trust {
