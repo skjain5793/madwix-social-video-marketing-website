@@ -3,28 +3,43 @@
    Premium dark creative-agency aesthetic on top of Bootstrap 5
    ========================================================= */
 
+/* =========================================================
+   CSS VARIABLES - Common across all themes
+   ========================================================= */
 :root {
-  --bg-void: #06050c;
-  --bg-dark: #0b0a16;
-  --bg-dark-2: #121026;
-  --bg-card: #14132a;
-  --bg-card-hover: #1b1938;
-  --border-soft: rgba(255, 255, 255, 0.08);
-  --text-main: #f5f4fb;
-  --text-muted: #a3a0bf;
-  --text-faint: #726f95;
-  --accent-purple: #8b5cf6;
-  --accent-purple-2: #a855f7;
-  --accent-pink: #ec4899;
-  --accent-blue: #6366f1;
-  --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #d946ef 55%, #ec4899 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(236, 72, 153, 0.12));
-  --shadow-glow: 0 20px 60px -20px rgba(139, 92, 246, 0.45);
+  /* Radius */
   --radius-lg: 22px;
   --radius-md: 16px;
   --radius-sm: 10px;
+  
+  /* Typography */
   --font-heading: 'Plus Jakarta Sans', 'Manrope', sans-serif;
   --font-body: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Theme-specific variables are defined in dark.css and light.css */
+
+/* Smooth transitions for theme changes */
+body,
+.site-nav,
+.navbar-collapse,
+.service-card,
+.stat-card,
+.platform-pill,
+.content-type-card,
+.why-card,
+.portfolio-card,
+.testimonial-card,
+.price-card,
+.faq-accordion .accordion-item,
+.accordion-button,
+.contact-info-card,
+.site-footer,
+.theme-toggle,
+.carousel-nav-btn,
+.social-icons a,
+.contact-info-item i {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 * {
@@ -212,7 +227,6 @@ p {
    ========================================================= */
 .site-nav {
   padding: 18px 0;
-  background: rgba(6, 5, 12, 0.35);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
@@ -222,9 +236,6 @@ p {
 
 .site-nav.scrolled {
   padding: 12px 0;
-  background: rgba(8, 7, 16, 0.75);
-  border-bottom: 1px solid var(--border-soft);
-  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-brand {
@@ -251,18 +262,11 @@ p {
 }
 
 .nav-link {
-  color: var(--text-muted) !important;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 8px 16px !important;
   border-radius: 50px;
   transition: all 0.25s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: #fff !important;
-  background: rgba(255, 255, 255, 0.06);
 }
 
 .hamburger-icon {
@@ -290,13 +294,71 @@ p {
   box-shadow: none;
 }
 
+/* Theme Toggle Button */
+.theme-toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-soft);
+  background: var(--bg-card);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-3px);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 8px 20px -8px rgba(139, 92, 246, 0.3);
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.theme-icon-light {
+  color: #fbbf24;
+  opacity: 0;
+  transform: scale(0.7) rotate(-90deg);
+}
+
+.theme-icon-dark {
+  color: #a855f7;
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+[data-theme="dark"] .theme-icon-dark {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+[data-theme="dark"] .theme-icon-light {
+  opacity: 0;
+  transform: scale(0.7) rotate(-90deg);
+}
+
+[data-theme="light"] .theme-icon-dark {
+  opacity: 0;
+  transform: scale(0.7) rotate(90deg);
+}
+
+[data-theme="light"] .theme-icon-light {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
 @media (max-width: 991.98px) {
   .navbar-collapse {
-    background: rgba(10, 9, 20, 0.98);
     border-radius: var(--radius-md);
     margin-top: 14px;
     padding: 18px;
-    border: 1px solid var(--border-soft);
     max-width: 100%;
   }
   .navbar-nav {
@@ -306,6 +368,9 @@ p {
     width: 100%;
     text-align: center;
     margin-top: 8px;
+  }
+  .nav-item .theme-toggle {
+    margin: 8px auto 0;
   }
   .site-nav {
     overflow-x: hidden;
@@ -318,16 +383,12 @@ p {
 .hero-section {
   position: relative;
   padding: 170px 0 110px;
-  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.28), transparent 60%), var(--bg-void);
   overflow: hidden;
 }
 
 .hero-bg-glow {
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.18), transparent 45%),
-    radial-gradient(circle at 85% 60%, rgba(236, 72, 153, 0.14), transparent 45%);
   pointer-events: none;
   z-index: 0;
 }
@@ -398,7 +459,6 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(6, 5, 12, 0.55) 100%);
 }
 
 .play-btn {
@@ -441,9 +501,7 @@ p {
   position: absolute;
   bottom: 14px;
   right: 14px;
-  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
-  color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 4px 10px;
@@ -455,10 +513,7 @@ p {
   position: absolute;
   top: 14px;
   left: 14px;
-  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 5px 12px;
@@ -518,7 +573,6 @@ p {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--border-soft);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -567,8 +621,6 @@ p {
    SERVICES
    ========================================================= */
 .service-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 36px 30px;
   height: 100%;
@@ -578,9 +630,6 @@ p {
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(168, 85, 247, 0.4);
-  background: var(--bg-card-hover);
-  box-shadow: 0 24px 50px -20px rgba(139, 92, 246, 0.35);
 }
 
 .service-icon {
@@ -640,7 +689,7 @@ p {
    GROWTH / STATS
    ========================================================= */
 .growth-section {
-  background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.05), transparent);
+  /* Background defined in theme files */
 }
 
 .growth-list {
@@ -678,8 +727,6 @@ p {
 }
 
 .stat-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 26px 20px;
   text-align: center;
@@ -689,7 +736,6 @@ p {
 
 .stat-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .stat-icon {
@@ -719,8 +765,6 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-faint);
-  background: rgba(255, 255, 255, 0.04);
   padding: 3px 10px;
   border-radius: 50px;
 }
@@ -772,7 +816,6 @@ p {
     left: 10%;
     right: 10%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
     z-index: 0;
   }
 }
@@ -796,8 +839,6 @@ p {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: var(--bg-card);
-  border: 1px solid rgba(168, 85, 247, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -806,7 +847,6 @@ p {
   margin: 0 auto 20px;
   position: relative;
   z-index: 1;
-  box-shadow: 0 0 0 8px var(--bg-void);
 }
 
 .process-step:hover .process-icon {
@@ -844,22 +884,18 @@ p {
    PORTFOLIO / OUR WORK
    ========================================================= */
 .work-section {
-  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(217, 70, 239, 0.08), transparent 60%);
+  /* Background defined in theme files */
 }
 
 .portfolio-card {
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   transition: all 0.3s ease;
   height: 100%;
 }
 
 .portfolio-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: 0 20px 40px -20px rgba(139, 92, 246, 0.4);
 }
 
 .portfolio-card .video-thumb {
@@ -903,7 +939,7 @@ p {
    SOCIAL MEDIA SECTION
    ========================================================= */
 .social-section {
-  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+  /* Background defined in theme files */
 }
 
 .platform-pill {
@@ -912,8 +948,6 @@ p {
   gap: 10px;
   padding: 12px 26px;
   border-radius: 50px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   font-weight: 700;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -926,8 +960,6 @@ p {
 
 .platform-pill:hover {
   transform: translateY(-4px);
-  border-color: rgba(168, 85, 247, 0.45);
-  background: var(--bg-card-hover);
 }
 
 @media (max-width: 767.98px) {
@@ -954,8 +986,6 @@ p {
 }
 
 .content-type-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 26px 16px;
   text-align: center;
@@ -978,8 +1008,6 @@ p {
 
 .content-type-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.4);
-  background: var(--bg-card-hover);
 }
 
 @media (max-width: 767.98px) {
@@ -1001,8 +1029,6 @@ p {
    WHY CHOOSE US
    ========================================================= */
 .why-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 34px 28px;
   height: 100%;
@@ -1011,8 +1037,6 @@ p {
 
 .why-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.4);
-  background: var(--bg-card-hover);
 }
 
 .why-card i {
@@ -1073,9 +1097,7 @@ p {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(10, 9, 20, 0.85);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   padding: 14px 18px;
   display: flex;
@@ -1122,12 +1144,10 @@ p {
    TESTIMONIALS
    ========================================================= */
 .testimonials-section {
-  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(139, 92, 246, 0.08), transparent 60%);
+  /* Background defined in theme files */
 }
 
 .testimonial-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   text-align: center;
@@ -1232,9 +1252,6 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--text-faint);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-soft);
   padding: 4px 10px;
   border-radius: 50px;
 }
@@ -1253,9 +1270,6 @@ p {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  color: #fff;
   transition: all 0.3s ease;
 }
 
@@ -1298,8 +1312,6 @@ p {
    PRICING
    ========================================================= */
 .price-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 40px 32px;
   height: 100%;
@@ -1309,13 +1321,9 @@ p {
 
 .price-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(168, 85, 247, 0.4);
 }
 
 .price-card-popular {
-  background: var(--bg-card-hover);
-  border: 1px solid rgba(168, 85, 247, 0.5);
-  box-shadow: var(--shadow-glow);
   transform: scale(1.03);
 }
 
@@ -1401,8 +1409,6 @@ p {
    FAQ
    ========================================================= */
 .faq-accordion .accordion-item {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
   border-radius: var(--radius-md) !important;
   margin-bottom: 14px;
   overflow: hidden;
@@ -1410,7 +1416,6 @@ p {
 
 .accordion-button {
   background: transparent;
-  color: var(--text-main);
   font-weight: 700;
   font-size: 1rem;
   padding: 20px 24px;
@@ -1418,12 +1423,11 @@ p {
 }
 
 .accordion-button:not(.collapsed) {
-  background: rgba(168, 85, 247, 0.08);
   color: #fff;
 }
 
 .accordion-button::after {
-  filter: invert(1) brightness(1.6);
+  /* Filter defined in theme files */
 }
 
 .accordion-body {
@@ -1448,12 +1452,10 @@ p {
    CONTACT
    ========================================================= */
 .contact-section {
-  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(139, 92, 246, 0.1), transparent 60%);
+  /* Background defined in theme files */
 }
 
 .contact-info-card {
-  background: var(--gradient-soft);
-  border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
 }
@@ -1505,17 +1507,14 @@ p {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-purple-2);
   flex-shrink: 0;
 }
 
 .contact-info-item i.icon-whatsapp {
   color: #25d366;
-  background: rgba(37, 211, 102, 0.12);
 }
 
 .contact-divider {
@@ -1532,12 +1531,9 @@ p {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--border-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-main);
   transition: all 0.3s ease;
 }
 
@@ -1586,9 +1582,7 @@ p {
    FOOTER
    ========================================================= */
 .site-footer {
-  background: var(--bg-dark);
   padding: 70px 0 30px;
-  border-top: 1px solid var(--border-soft);
 }
 
 .footer-tag {

@@ -6,6 +6,26 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------------------------------------------------------
+     Theme Toggle
+     --------------------------------------------------------- */
+  var themeToggle = document.getElementById('themeToggle');
+  
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  
+  function toggleTheme() {
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+  
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
+
+  /* ---------------------------------------------------------
      AOS — scroll reveal animations
      --------------------------------------------------------- */
   if (window.AOS) {

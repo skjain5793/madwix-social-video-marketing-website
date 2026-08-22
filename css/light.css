@@ -1,0 +1,353 @@
+/* =========================================================
+   LIGHT THEME STYLES
+   Theme-specific colors, backgrounds, and visual styles
+   ========================================================= */
+
+[data-theme="light"] {
+  --bg-void: #ffffff;
+  --bg-dark: #f8f9fa;
+  --bg-dark-2: #f1f3f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f9fa;
+  --border-soft: rgba(0, 0, 0, 0.08);
+  --text-main: #1a1a2e;
+  --text-muted: #5a5a6e;
+  --text-faint: #8a8a9e;
+  --accent-purple: #8b5cf6;
+  --accent-purple-2: #a855f7;
+  --accent-pink: #ec4899;
+  --accent-blue: #6366f1;
+  --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #d946ef 55%, #ec4899 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(236, 72, 153, 0.06));
+  --shadow-glow: 0 20px 60px -20px rgba(139, 92, 246, 0.25);
+}
+
+/* Navigation */
+[data-theme="light"] .site-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+[data-theme="light"] .site-nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .navbar-brand {
+  color: var(--text-main);
+}
+
+[data-theme="light"] .hamburger-icon span {
+  background: var(--text-main);
+}
+
+[data-theme="light"] .nav-link {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+  color: var(--text-main) !important;
+  background: rgba(139, 92, 246, 0.08);
+}
+
+@media (max-width: 991.98px) {
+  [data-theme="light"] .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--border-soft);
+  }
+}
+
+/* Hero Section */
+[data-theme="light"] .hero-section {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.12), transparent 60%), var(--bg-void);
+}
+
+[data-theme="light"] .hero-bg-glow {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(236, 72, 153, 0.06), transparent 45%);
+}
+
+[data-theme="light"] .video-thumb::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+[data-theme="light"] .video-duration {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+[data-theme="light"] .video-badge {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Sections */
+[data-theme="light"] #services {
+  background: var(--bg-dark);
+}
+
+[data-theme="light"] #process {
+  background: var(--bg-dark);
+}
+
+[data-theme="light"] .growth-section {
+  background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.03), transparent);
+}
+
+[data-theme="light"] .work-section {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(217, 70, 239, 0.04), transparent 60%);
+}
+
+[data-theme="light"] .social-section {
+  background: var(--bg-dark);
+}
+
+[data-theme="light"] .about-section {
+  background: var(--bg-dark);
+}
+
+[data-theme="light"] .testimonials-section {
+  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(139, 92, 246, 0.04), transparent 60%);
+}
+
+[data-theme="light"] .contact-section {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.04) 0%, rgba(217, 70, 239, 0.06) 50%, rgba(236, 72, 153, 0.05) 100%), 
+              radial-gradient(ellipse 80% 70% at 50% 40%, rgba(139, 92, 246, 0.08), transparent 65%);
+}
+
+/* Cards */
+[data-theme="light"] .service-card,
+[data-theme="light"] .stat-card,
+[data-theme="light"] .platform-pill,
+[data-theme="light"] .content-type-card,
+[data-theme="light"] .why-card,
+[data-theme="light"] .portfolio-card,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .price-card,
+[data-theme="light"] .faq-accordion .accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .service-card:hover,
+[data-theme="light"] .why-card:hover,
+[data-theme="light"] .content-type-card:hover,
+[data-theme="light"] .platform-pill:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 24px -8px rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="light"] .portfolio-card:hover {
+  box-shadow: 0 20px 40px -20px rgba(139, 92, 246, 0.25);
+}
+
+[data-theme="light"] .price-card-popular {
+  background: var(--bg-card-hover);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 12px 40px -12px rgba(139, 92, 246, 0.2);
+}
+
+/* Process */
+[data-theme="light"] .process-num {
+  color: #7c3aed;
+  font-weight: 900;
+}
+
+[data-theme="light"] .process-icon {
+  background: var(--gradient-main);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 0 8px var(--bg-dark), 0 8px 20px -6px rgba(139, 92, 246, 0.4);
+}
+
+@media (min-width: 992px) {
+  [data-theme="light"] .process-line {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(139, 92, 246, 0.2),
+      transparent
+    );
+  }
+}
+
+/* Buttons */
+[data-theme="light"] .btn-outline-light {
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .btn-outline-light:hover {
+  background: rgba(139, 92, 246, 0.08);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: var(--accent-purple);
+}
+
+/* Contact */
+[data-theme="light"] .contact-info-card {
+  background: var(--gradient-soft);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="light"] .contact-info-item i {
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--accent-purple-2);
+}
+
+[data-theme="light"] .contact-info-item i.icon-whatsapp {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.12);
+}
+
+[data-theme="light"] .social-icons a {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+}
+
+/* Footer */
+[data-theme="light"] .site-footer {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* About */
+[data-theme="light"] .about-badge-float {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-soft);
+}
+
+/* Accordion */
+[data-theme="light"] .accordion-button {
+  color: var(--text-main);
+}
+
+[data-theme="light"] .accordion-button:not(.collapsed) {
+  background: rgba(139, 92, 246, 0.06);
+  color: var(--accent-purple);
+}
+
+[data-theme="light"] .accordion-button::after {
+  filter: none;
+  opacity: 0.7;
+}
+
+[data-theme="light"] .accordion-body {
+  color: var(--text-muted);
+}
+
+/* Carousel */
+[data-theme="light"] .carousel-nav-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+}
+
+/* Section badge */
+[data-theme="light"] .section-badge {
+  color: var(--accent-purple);
+  background: var(--gradient-soft);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Scroll indicator */
+[data-theme="light"] .scroll-indicator {
+  border: 1px solid var(--border-soft);
+  color: var(--text-muted);
+}
+
+/* Trust points */
+[data-theme="light"] .trust-point i {
+  color: var(--accent-purple-2);
+}
+
+/* Stats disclaimer */
+[data-theme="light"] .stats-disclaimer {
+  color: var(--text-faint);
+}
+
+/* Sample tag */
+[data-theme="light"] .sample-tag,
+[data-theme="light"] .stat-tag {
+  color: var(--text-faint);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Navbar toggler */
+[data-theme="light"] .navbar-toggler {
+  border: 1px solid var(--border-soft);
+}
+
+/* Stars */
+[data-theme="light"] .stars {
+  color: #fbbf24;
+}
+
+/* Selection */
+[data-theme="light"] ::selection {
+  background: var(--accent-purple);
+  color: #fff;
+}
+
+/* Navbar brand */
+[data-theme="light"] .navbar-brand {
+  color: var(--text-main);
+}
+
+/* Theme toggle */
+[data-theme="light"] .theme-toggle {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+}
+
+/* Video progress */
+[data-theme="light"] .video-progress {
+  height: 4px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Testimonial author */
+[data-theme="light"] .testimonial-author span {
+  color: var(--text-muted);
+}
+
+/* Portfolio cat */
+[data-theme="light"] .portfolio-cat {
+  color: var(--accent-purple-2);
+}
+
+/* Learn more */
+[data-theme="light"] .learn-more {
+  color: var(--accent-purple-2);
+}
+
+[data-theme="light"] .learn-more:hover {
+  color: var(--accent-purple);
+}
+
+/* Contact info item hover */
+[data-theme="light"] .contact-info-item:hover {
+  color: var(--accent-purple-2);
+}
+
+/* Footer links */
+[data-theme="light"] .footer-links a:hover {
+  color: var(--accent-purple-2);
+}
+
+/* Sample tag */
+[data-theme="light"] .sample-tag {
+  color: var(--text-faint);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-soft);
+}

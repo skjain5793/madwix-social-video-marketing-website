@@ -24,6 +24,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dark.css">
+<link rel="stylesheet" href="css/light.css">
+
+<!-- Theme initialization script (prevent flash) -->
+<script>
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+</script>
 </head>
 <body>
 
@@ -48,7 +58,13 @@
         <li class="nav-item"><a class="nav-link scroll-link" href="#why-us">Why Us</a></li>
         <li class="nav-item"><a class="nav-link scroll-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link scroll-link" href="#contact">Contact</a></li>
-        <li class="nav-item ms-lg-3">
+        <li class="nav-item ms-lg-2">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="bi bi-sun-fill theme-icon-light"></i>
+            <i class="bi bi-moon-fill theme-icon-dark"></i>
+          </button>
+        </li>
+        <li class="nav-item ms-lg-2">
           <a href="#contact" class="btn btn-gradient scroll-link">Get Started</a>
         </li>
       </ul>

@@ -1,0 +1,247 @@
+/* =========================================================
+   DARK THEME STYLES
+   Theme-specific colors, backgrounds, and visual styles
+   ========================================================= */
+
+[data-theme="dark"] {
+  --bg-void: #06050c;
+  --bg-dark: #0b0a16;
+  --bg-dark-2: #121026;
+  --bg-card: #14132a;
+  --bg-card-hover: #1b1938;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --text-main: #f5f4fb;
+  --text-muted: #a3a0bf;
+  --text-faint: #726f95;
+  --accent-purple: #8b5cf6;
+  --accent-purple-2: #a855f7;
+  --accent-pink: #ec4899;
+  --accent-blue: #6366f1;
+  --gradient-main: linear-gradient(135deg, #8b5cf6 0%, #d946ef 55%, #ec4899 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(236, 72, 153, 0.12));
+  --shadow-glow: 0 20px 60px -20px rgba(139, 92, 246, 0.45);
+}
+
+/* Navigation */
+[data-theme="dark"] .site-nav {
+  background: rgba(6, 5, 12, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+[data-theme="dark"] .site-nav.scrolled {
+  background: rgba(8, 7, 16, 0.75);
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 991.98px) {
+  [data-theme="dark"] .navbar-collapse {
+    background: rgba(10, 9, 20, 0.98);
+    border: 1px solid var(--border-soft);
+  }
+}
+
+/* Hero Section */
+[data-theme="dark"] .hero-section {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139, 92, 246, 0.28), transparent 60%), var(--bg-void);
+}
+
+[data-theme="dark"] .hero-bg-glow {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 60%, rgba(236, 72, 153, 0.14), transparent 45%);
+}
+
+[data-theme="dark"] .video-thumb::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(6, 5, 12, 0.55) 100%);
+}
+
+[data-theme="dark"] .video-duration {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+[data-theme="dark"] .video-badge {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Sections */
+[data-theme="dark"] .growth-section {
+  background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.05), transparent);
+}
+
+[data-theme="dark"] .work-section {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(217, 70, 239, 0.08), transparent 60%);
+}
+
+[data-theme="dark"] .social-section {
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+}
+
+[data-theme="dark"] .testimonials-section {
+  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(139, 92, 246, 0.08), transparent 60%);
+}
+
+[data-theme="dark"] .contact-section {
+  background: radial-gradient(ellipse 70% 60% at 50% 30%, rgba(139, 92, 246, 0.1), transparent 60%);
+}
+
+/* Cards */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .platform-pill,
+[data-theme="dark"] .content-type-card,
+[data-theme="dark"] .why-card,
+[data-theme="dark"] .portfolio-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .price-card,
+[data-theme="dark"] .faq-accordion .accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+}
+
+[data-theme="dark"] .service-card:hover,
+[data-theme="dark"] .why-card:hover,
+[data-theme="dark"] .content-type-card:hover,
+[data-theme="dark"] .platform-pill:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+[data-theme="dark"] .price-card-popular {
+  background: var(--bg-card-hover);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Process */
+[data-theme="dark"] .process-icon {
+  background: var(--bg-card);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 0 0 8px var(--bg-void);
+}
+
+/* Buttons */
+[data-theme="dark"] .btn-outline-light {
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+/* Contact */
+[data-theme="dark"] .contact-info-card {
+  background: var(--gradient-soft);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+[data-theme="dark"] .contact-info-item i {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-purple-2);
+}
+
+[data-theme="dark"] .contact-info-item i.icon-whatsapp {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.12);
+}
+
+[data-theme="dark"] .social-icons a {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-soft);
+  color: var(--text-main);
+}
+
+/* Footer */
+[data-theme="dark"] .site-footer {
+  background: var(--bg-dark);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* About */
+[data-theme="dark"] .about-badge-float {
+  background: rgba(10, 9, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-soft);
+}
+
+/* Accordion */
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background: rgba(168, 85, 247, 0.08);
+  color: #fff;
+}
+
+[data-theme="dark"] .accordion-button {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1) brightness(1.6);
+}
+
+[data-theme="dark"] .accordion-body {
+  color: var(--text-muted);
+}
+
+/* Carousel */
+[data-theme="dark"] .carousel-nav-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: #fff;
+}
+
+/* Section badge */
+[data-theme="dark"] .section-badge {
+  color: #e9d5ff;
+  background: var(--gradient-soft);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* Sample tag */
+[data-theme="dark"] .sample-tag {
+  color: var(--text-faint);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-soft);
+}
+
+/* Navbar brand color */
+[data-theme="dark"] .navbar-brand {
+  color: #fff;
+}
+
+/* Theme toggle */
+[data-theme="dark"] .theme-toggle {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-soft);
+}
+
+/* Process line */
+[data-theme="dark"] @media (min-width: 992px) {
+  .process-line {
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.4), transparent);
+  }
+}
+
+/* Scroll indicator */
+[data-theme="dark"] .scroll-indicator {
+  border: 1px solid var(--border-soft);
+}
