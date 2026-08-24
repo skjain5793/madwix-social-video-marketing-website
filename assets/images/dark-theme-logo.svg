@@ -1,0 +1,37 @@
+<svg width="974" height="911" viewBox="0 0 974 911" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="55%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <filter id="filter0_di_1571_508" x="90" y="0" width="802" height="733" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="3" dy="-6"/>
+      <feGaussianBlur stdDeviation="9"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1571_508"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1571_508" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="-12"/>
+      <feGaussianBlur stdDeviation="14.5"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.325 0 0 0 0 0.175918 0 0 0 0 0 0 0 0 0.52 0"/>
+      <feBlend mode="normal" in2="shape" result="effect2_innerShadow_1571_508"/>
+    </filter>
+  </defs>
+
+  <path d="M859.421 386.052L858.956 387.708L768.939 708.5H665.658L499.394 190.253L487.491 153.153L475.589 190.253L309.325 708.5H207.001L16.5353 36.5H114.303L251.347 536.537L262.469 577.116L275.307 537.047L435.676 36.5H540.318L703.619 541.014L716.68 581.365L727.591 540.381L861.735 36.5H957.51L859.421 386.052ZM794.904 708.5L858.956 480.241V708.5H794.904Z"
+        stroke="white"
+        stroke-width="25"/>
+
+  <g filter="url(#filter0_di_1571_508)">
+    <path fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M871 721H754.136V207.835L678.152 396.421L625.487 233.723L710.926 24H871V721ZM546.923 400.845L488 555.843L425.803 404.122L376.701 561.414L434.969 721H537.103L599.299 555.843L546.923 400.845ZM347.239 250.107L298.137 404.122L219.9 209.801V721H105V24H262.128L347.239 250.107Z"
+          fill="url(#orangeGradient)"/>
+  </g>
+</svg>

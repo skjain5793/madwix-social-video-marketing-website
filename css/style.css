@@ -261,6 +261,22 @@ p {
   box-shadow: 0 8px 20px -6px rgba(168, 85, 247, 0.6);
 }
 
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 0;
+  position: relative;
+}
+
+.brand-logo img {
+  top: 10%;
+}
+
 .nav-link {
   font-weight: 600;
   font-size: 0.95rem;

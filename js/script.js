@@ -11,10 +11,26 @@ document.addEventListener('DOMContentLoaded', function () {
      Theme Toggle
      --------------------------------------------------------- */
   var themeToggle = document.getElementById('themeToggle');
+  var siteLogo = document.getElementById('siteLogo');
+  var footerLogo = document.getElementById('footerLogo');
+  
+  function updateLogo(theme) {
+    var logoPath = theme === 'dark' 
+      ? 'assets/images/dark-theme-logo.svg' 
+      : 'assets/images/light-theme-logo.svg';
+    
+    if (siteLogo) {
+      siteLogo.src = logoPath;
+    }
+    if (footerLogo) {
+      footerLogo.src = logoPath;
+    }
+  }
   
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
+    updateLogo(theme);
   }
   
   function toggleTheme() {
@@ -26,6 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (themeToggle) {
     themeToggle.addEventListener('click', toggleTheme);
   }
+
+  // Set the correct logo on page load
+  var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  updateLogo(currentTheme);
 
   /* ---------------------------------------------------------
      AOS — scroll reveal animations
