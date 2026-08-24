@@ -593,27 +593,6 @@ p {
   }
 }
 
-.scroll-indicator {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  animation: bounceDown 2s infinite;
-  z-index: 2;
-}
-
-@keyframes bounceDown {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 8px); }
-}
-
 @media (max-width: 991.98px) {
   .hero-section {
     padding: 140px 0 90px;
@@ -636,12 +615,6 @@ p {
   
   .hero-section .d-flex.flex-wrap {
     justify-content: center;
-  }
-  
-  .scroll-indicator {
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
   }
 }
 
