@@ -81,7 +81,7 @@
     <!-- X -->
     <g
         fill="url(#purpleGradient)"
-        transform="translate(880 385)"
+        transform="translate(700 385)"
     >
         <path
             d="M0 0 L48 0 L155 110 L107 110 Z"

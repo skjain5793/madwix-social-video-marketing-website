@@ -90,7 +90,7 @@
     <!-- X -->
     <g
         fill="url(#purpleGradient)"
-        transform="translate(880 385)"
+        transform="translate(700 385)"
     >
         <path
             d="M0 0 L48 0 L155 110 L107 110 Z"
@@ -127,7 +127,7 @@
     <!-- ========================= -->
 
     <text
-        x="150"
+        x="100"
         y="600"
         fill="#ffffff"
         font-family="Montserrat, Arial, Helvetica, sans-serif"
@@ -139,7 +139,7 @@
     </text>
 
     <text
-        x="485"
+        x="350"
         y="600"
         fill="#d946ef"
         font-family="Arial, Helvetica, sans-serif"
@@ -149,7 +149,7 @@
     </text>
 
     <text
-        x="545"
+        x="400"
         y="600"
         fill="#ffffff"
         font-family="Montserrat, Arial, Helvetica, sans-serif"
@@ -161,7 +161,7 @@
     </text>
 
     <text
-        x="795"
+        x="650"
         y="600"
         fill="#d946ef"
         font-family="Arial, Helvetica, sans-serif"
@@ -171,7 +171,7 @@
     </text>
 
     <text
-        x="855"
+        x="700"
         y="600"
         fill="#ffffff"
         font-family="Montserrat, Arial, Helvetica, sans-serif"
