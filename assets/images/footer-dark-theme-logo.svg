@@ -1,0 +1,185 @@
+<svg
+    width="100%"
+    height="auto"
+    viewBox="0 0 1200 650"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <defs>
+        <!-- Purple gradient -->
+        <linearGradient
+            id="purpleGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+        >
+            <stop offset="0%" stop-color="#8b5cf6"/>
+            <stop offset="55%" stop-color="#d946ef"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+        </linearGradient>
+
+        <!-- Subtle glow -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- ========================= -->
+    <!-- MADWIX ICON -->
+    <!-- ========================= -->
+
+    <!-- Left upper M -->
+    <path
+        d="M300 30
+           L300 340
+           L355 340
+           L355 135
+           L500 250
+           L500 175
+           Z"
+        fill="url(#purpleGradient)"
+    />
+
+    <!-- White diagonal -->
+    <path
+        d="M500 175
+           L650 65
+           L650 135
+           L500 245
+           Z"
+        fill="#ffffff"
+    />
+
+    <!-- Lower M / W shape -->
+    <path
+        d="M395 210
+           L395 275
+           L510 375
+           L610 295
+           L610 340
+           L675 405
+           L835 150
+           L770 150
+           L675 300
+           L610 230
+           L510 310
+           Z"
+        fill="url(#purpleGradient)"
+    />
+
+    <!-- ========================= -->
+    <!-- MADWIX TEXT -->
+    <!-- ========================= -->
+
+    <text
+        x="105"
+        y="500"
+        fill="#ffffff"
+        font-family="Montserrat, Arial, Helvetica, sans-serif"
+        font-size="138"
+        font-weight="700"
+        letter-spacing="12"
+    >
+        MADWI
+    </text>
+
+    <!-- X -->
+    <g
+        fill="url(#purpleGradient)"
+        transform="translate(880 385)"
+    >
+        <path
+            d="M0 0 L48 0 L155 110 L107 110 Z"
+        />
+        <path
+            d="M107 0 L155 0 L48 110 L0 110 Z"
+        />
+    </g>
+
+    <!-- ========================= -->
+    <!-- DIVIDER -->
+    <!-- ========================= -->
+
+    <line
+        x1="105"
+        y1="545"
+        x2="1095"
+        y2="545"
+        stroke="url(#purpleGradient)"
+        stroke-width="2"
+    />
+
+    <!-- Glow point -->
+    <circle
+        cx="600"
+        cy="545"
+        r="5"
+        fill="#d946ef"
+        filter="url(#glow)"
+    />
+
+    <!-- ========================= -->
+    <!-- TAGLINE -->
+    <!-- ========================= -->
+
+    <text
+        x="150"
+        y="600"
+        fill="#ffffff"
+        font-family="Montserrat, Arial, Helvetica, sans-serif"
+        font-size="27"
+        font-weight="500"
+        letter-spacing="10"
+    >
+        CREATIVE
+    </text>
+
+    <text
+        x="485"
+        y="600"
+        fill="#d946ef"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+    >
+        |
+    </text>
+
+    <text
+        x="545"
+        y="600"
+        fill="#ffffff"
+        font-family="Montserrat, Arial, Helvetica, sans-serif"
+        font-size="27"
+        font-weight="500"
+        letter-spacing="10"
+    >
+        CONTENT
+    </text>
+
+    <text
+        x="795"
+        y="600"
+        fill="#d946ef"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30"
+    >
+        |
+    </text>
+
+    <text
+        x="855"
+        y="600"
+        fill="#ffffff"
+        font-family="Montserrat, Arial, Helvetica, sans-serif"
+        font-size="27"
+        font-weight="500"
+        letter-spacing="10"
+    >
+        GROWTH
+    </text>
+
+</svg>

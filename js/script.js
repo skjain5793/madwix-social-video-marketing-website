@@ -18,12 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var logoPath = theme === 'dark' 
       ? 'assets/images/dark-theme-logo.svg' 
       : 'assets/images/light-theme-logo.svg';
+
+    var footerLogoPath = theme === 'dark' 
+      ? 'assets/images/footer-dark-theme-logo.svg' 
+      : 'assets/images/footer-light-theme-logo.svg';
     
     if (siteLogo) {
       siteLogo.src = logoPath;
     }
     if (footerLogo) {
-      footerLogo.src = logoPath;
+      footerLogo.src = footerLogoPath;
     }
   }
   
