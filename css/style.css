@@ -302,6 +302,7 @@ p {
   flex-direction: column;
   gap: 5px;
   width: 24px;
+  vertical-align: middle;
 }
 
 .hamburger-icon span {
@@ -316,6 +317,9 @@ p {
   border: 1px solid var(--border-soft);
   border-radius: 10px;
   padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-toggler:focus {
